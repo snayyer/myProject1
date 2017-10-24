@@ -109,7 +109,7 @@ figure {
  */
 
 hr {
-  box-sizing: content-box; /* 1 */
+  /*box-sizing: content-box; *//* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
@@ -145,7 +145,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+   /* 2 */
 }
 
 /**
@@ -227,23 +227,15 @@ sup {
 /* Embedded content
    ========================================================================== */
 
-/**
- * Add the correct display in IE 9-.
- */
-
-audio,
-video {
-  display: inline-block;
-}
 
 /**
  * Add the correct display in iOS 4-7.
  */
-
+/*
 audio:not([controls]) {
   display: none;
   height: 0;
-}
+}*/
 
 /**
  * Remove the border on images inside links in IE 10-.
@@ -256,10 +248,10 @@ img {
 /**
  * Hide the overflow in IE.
  */
-
+/*
 svg:not(:root) {
   overflow: hidden;
-}
+}*/
 
 /* Forms
    ========================================================================== */
@@ -317,13 +309,13 @@ html [type="button"], /* 1 */
  * Remove the inner border and padding in Firefox.
  */
 
-button::-moz-focus-inner,
+/*button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
-}
+}*/
 
 /**
  * Restore the focus styles unset by the previous rule.
@@ -352,9 +344,9 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
+  /*box-sizing: border-box; *//* 1 */
   color: inherit; /* 2 */
-  display: table; /* 1 */
+ /* display: table;*/ /* 1 */
   max-width: 100%; /* 1 */
   padding: 0; /* 3 */
   white-space: normal; /* 1 */
@@ -366,7 +358,6 @@ legend {
  */
 
 progress {
-  display: inline-block; /* 1 */
   vertical-align: baseline; /* 2 */
 }
 
@@ -378,25 +369,16 @@ textarea {
   overflow: auto;
 }
 
-/**
- * 1. Add the correct box sizing in IE 10-.
- * 2. Remove the padding in IE 10-.
- */
 
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-
+/*
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
-}
+}*/
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
@@ -405,27 +387,27 @@ textarea {
 
 [type="search"] {
   -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  /*outline-offset: -2px;*/ /* 2 */
 }
 
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
-
+/*
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
-}
+}*/
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
-
+/*
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
+  -webkit-appearance: button; *//* 1 */
+ /* font: inherit; *//* 2 */
+/*}*/
 
 /* Interactive
    ========================================================================== */
@@ -454,10 +436,10 @@ summary {
 /**
  * Add the correct display in IE 9-.
  */
-
+/*
 canvas {
   display: inline-block;
-}
+}*/
 
 /**
  * Add the correct display in IE.
@@ -498,22 +480,26 @@ p {
 
 #imgMakeup {
 	width: inherit;
-	max-width: 100%;
+	/*max-width: 100%;*/
 	height: auto;
 	margin: 0 auto;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1em;
+	min-width: 480px;
+	max-width: 600px;
 }
 
 form {
-	border-radius: 5px;
+	/*border-radius: 5px;*/
   margin: 0 auto;
   /*padding: 1em 1em 2em 0;*/
   background: #f2f3f4;
 	padding-top: 1em;
-	padding-bottom: 1em;
+	/*padding-bottom: 1em;*/
+	min-width: 480px;
+	max-width: 600px;
 }
 
 h2 {
@@ -525,21 +511,21 @@ h2 {
 input[type=email],
 input[type=tel],
 input[type=text] {
-	width: 100%;
+	width: 550px;
   padding: 1em;
   margin: 1em 0 2em 0;
   border: 1px solid #cccccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+  /*border-radius: 5px;
+  box-sizing: border-box;*/
 }
 
 div {
-	width: 100%;
+	/*width: 100%;*/
   padding: 1em;
   margin: 1em 0 2em 0;
   border: 1px solid #cccccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+ /* border-radius: 5px;
+  box-sizing: border-box;*/
 	background-color: #ffffff;
 }
 
@@ -559,11 +545,12 @@ button {
 	border-color: #6bb6ff;
 	color: white;
 	background-color: #6bb6ff;
-	border-radius:3px;
+	/*border-radius:3px;*/
 	display: block;
   margin: 0 auto;
 	margin-top: 1em;
 }
+/*
 @media screen and (min-width: 480px) {
   form {
     max-width: 600px;
@@ -572,10 +559,10 @@ button {
 	#imgMakeup {
 		max-width: 600px;
 	}
-}
+}*/
 h5 {
 	color: #009900;
-font-family: 3px;
+font-family: sans-serif;
 line-height: 90%;
 text-align: center;
 }
