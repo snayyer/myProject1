@@ -1,0 +1,65 @@
+
+
+fieldset {
+  display: block;
+  margin-left:25%;
+  margin-right: 40%;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px groove (internal value);
+  text-align: center;
+
+  }
+  
+input{
+	text-align:center;
+	margin-left: 40%;
+	margin-right: 10%;
+}
+
+h2	{
+ text-align: center ;
+} 
+  
+textarea {
+  overflow: auto;
+}
+
+label, input {
+	color: #990099;
+  display: block;
+}
+/* for decorating text */
+ h2, h5 {
+	color: #009900;
+font-family: 3px;
+line-height: 90%;
+}
+body{
+line-height: 15px;
+  background-color: light;
+
+font-family: Georgia, "Times New Roman", serif;
+font-weight: 500;
+  
+
+}
+/* if max size of browse is less then 700px  condatation is true*/
+
+@media only screen and (max-width: 1000px) {
+
+    body {
+        background-color: lightgray;
+    }
+    fieldset {
+
+      background-color: #fff;
+    }
+   
+}
+
+
+
+
