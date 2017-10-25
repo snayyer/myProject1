@@ -1,4 +1,11 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
 
+/* stylelint-disable */
+
+/* Keep reset CSS to one minified line */
 
 body, div, span,h1,img,center,fieldset, form, label{
 	margin: 0;
