@@ -1,18 +1,6 @@
 
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+body, div, span,h1,img,center,fieldset, form, label{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -70,17 +58,15 @@ html {
 
 body {
   margin: 0;
+ 
 }
 
 /**
  * Add the correct display in IE 9-.
  */
 
-article,
-aside,
 footer,
 header,
-nav,
 section {
   display: block;
 }
@@ -103,7 +89,7 @@ h1 {
  * 1. Add the correct display in IE.
  */
 
-figcaption,
+
 figure,
 main { /* 1 */
   display: block;
@@ -123,6 +109,7 @@ figure {
  */
 
 hr {
+  box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
@@ -158,7 +145,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
- }
+  text-decoration: underline dotted; /* 2 */
+}
 
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
@@ -239,16 +227,24 @@ sup {
 /* Embedded content
    ========================================================================== */
 
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
 
 /**
  * Add the correct display in iOS 4-7.
  */
-/*
+
 audio:not([controls]) {
   display: none;
   height: 0;
 }
-*/
+
 /**
  * Remove the border on images inside links in IE 10-.
  */
@@ -260,11 +256,11 @@ img {
 /**
  * Hide the overflow in IE.
  */
-/*
+
 svg:not(:root) {
   overflow: hidden;
 }
-*/
+
 /* Forms
    ========================================================================== */
 
@@ -320,14 +316,14 @@ html [type="button"], /* 1 */
 /**
  * Remove the inner border and padding in Firefox.
  */
-/*
+
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
-}*/
+}
 
 /**
  * Restore the focus styles unset by the previous rule.
@@ -356,9 +352,9 @@ fieldset {
  */
 
 legend {
-  
+  box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
-
+  display: table; /* 1 */
   max-width: 100%; /* 1 */
   padding: 0; /* 3 */
   white-space: normal; /* 1 */
@@ -370,7 +366,7 @@ legend {
  */
 
 progress {
-  
+  display: inline-block; /* 1 */
   vertical-align: baseline; /* 2 */
 }
 
@@ -389,34 +385,47 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  
+  box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-/*
+
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
-}*/
+}
 
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
 
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
-/*
+
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
-}*/
+}
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
 
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
 
 /* Interactive
    ========================================================================== */
@@ -442,6 +451,13 @@ summary {
 /* Scripting
    ========================================================================== */
 
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
 
 /**
  * Add the correct display in IE.
@@ -481,7 +497,7 @@ p {
 }
 
 #imgMakeup {
-	
+	width: inherit;
 	max-width: 100%;
 	height: auto;
 	margin: 0 auto;
@@ -492,12 +508,12 @@ p {
 }
 
 form {
-
+	border-radius: 5px;
   margin: 0 auto;
   /*padding: 1em 1em 2em 0;*/
   background: #f2f3f4;
 	padding-top: 1em;
-	
+	padding-bottom: 1em;
 }
 
 h2 {
@@ -509,18 +525,21 @@ h2 {
 input[type=email],
 input[type=tel],
 input[type=text] {
+	width: 100%;
   padding: 1em;
   margin: 1em 0 2em 0;
   border: 1px solid #cccccc;
-
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 div {
-	width: auto;
+	width: 100%;
   padding: 1em;
   margin: 1em 0 2em 0;
   border: 1px solid #cccccc;
-
+  border-radius: 5px;
+  box-sizing: border-box;
 	background-color: #ffffff;
 }
 
@@ -531,6 +550,7 @@ input[type="radio"] {
 	margin-right: 0.5em;
 }
 
+
 button {
 	padding: 0.5em;
   width: 200px;
@@ -539,28 +559,23 @@ button {
 	border-color: #6bb6ff;
 	color: white;
 	background-color: #6bb6ff;
+	border-radius:3px;
 	display: block;
   margin: 0 auto;
 	margin-top: 1em;
 }
-
-@media screen  {
+@media screen and (min-width: 480px) {
   form {
     max-width: 600px;
+	
   }
 	#imgMakeup {
 		max-width: 600px;
 	}
-	input[type=email],
-input[type=tel],
-input[type=text] {
-	width: auto;
 }
-}
-
 h5 {
 	color: #009900;
-font-family: sans-serif;
+font-family: "Times New Roman", Georgia, Serif;
 line-height: 90%;
 text-align: center;
 }
