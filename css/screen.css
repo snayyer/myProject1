@@ -568,9 +568,18 @@ button {
   form {
     max-width: 600px;
 	
-  }
+		}
 	#imgMakeup {
 		max-width: 600px;
+	}
+  h1 { 
+		font-size: 23pt;
+		margin: 0em;
+		}
+		
+  p {
+		font-size: 16pt;
+		margin: 2.5em;
 	}
 }
 h5 {
