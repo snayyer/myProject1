@@ -579,16 +579,16 @@ button {
 	#imgMakeup {
 		max-width: 600px;
 	}
-  h1 { 
-		font-size: 23pt;
-		margin: 0em;
-		}
-		
-  p {
-		font-size: 16pt;
-		margin: 2.5em;
-	}
+  
+
+/* Any color while on the button */
+@media (hover: hover) {
+  button:hover {
+    background: blue;
+  }
 }
+
+
 h5 {
 	color: #009900;
 font-family: "Times New Roman", Georgia, Serif;
